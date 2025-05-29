@@ -22,10 +22,10 @@ type User struct {
 	Gender       string     `gorm:"type:user_gender" json:"gender"`
 	CreatedBy    string     `gorm:"type:text" json:"created_by"`
 	UpdatedBy    string     `gorm:"type:text" json:"updated_by"`
-	DeletedBy    string     `gorm:"type:text" json:"deleted_by"`
+	DeletedBy    *string    `gorm:"type:text" json:"deleted_by"`
 	CreatedAt    time.Time  `gorm:"autoCreateTime" json:"created_at"`
 	UpdatedAt    time.Time  `gorm:"autoUpdateTime" json:"updated_at"`
-	DeletedAt    time.Time  `json:"deleted_at"`
+	DeletedAt    *time.Time `json:"deleted_at"`
 }
 
 func (User) TableName() string {
