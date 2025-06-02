@@ -18,8 +18,8 @@ type User struct {
 	MobilePhone  string     `gorm:"size:10" json:"mobile_phone"`
 	OfficePhone  string     `gorm:"size:10" json:"office_phone"`
 	Email        string     `gorm:"size:255" json:"email"`
-	BOD          time.Time  `json:"bod"` // Birth of Date
-	Gender       string     `gorm:"type:user_gender" json:"gender"`
+	BOD          time.Time  `json:"bod"`                            // Birth of Date
+	Gender       string     `gorm:"type:user_gender" json:"gender"` // MALE, FEMALE
 	CreatedBy    string     `gorm:"type:text" json:"created_by"`
 	UpdatedBy    string     `gorm:"type:text" json:"updated_by"`
 	DeletedBy    *string    `gorm:"type:text" json:"deleted_by"`
